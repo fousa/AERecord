@@ -22,7 +22,9 @@
 // SOFTWARE.
 //
 
-import UIKit
+#if os(iOS)
+    import UIKit
+#endif
 import CoreData
 
 let kAERecordPrintLog = true
@@ -579,6 +581,8 @@ public extension NSManagedObject {
     
 }
 
+#if os(iOS)
+    
 //  MARK: - CoreData driven UITableViewController
 public class CoreDataTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
@@ -921,3 +925,5 @@ public class CoreDataCollectionViewController: UICollectionViewController, NSFet
     }
     
 }
+    
+#endif
